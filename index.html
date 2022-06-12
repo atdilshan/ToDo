@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>TODO App</title>
+        <meta name="description" content="TODO app with Vanilla.js">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+
+        <div id="banner">
+            <h1>TODO APP</h1>
+            <div id="filterholder">
+                Filter:
+                <button onclick="vApp.showAllTasks()">Show all</button>
+                <button onclick="vApp.filterTasks(false)">Complete</button>
+                <button onclick="vApp.filterTasks(true)"> Incomplete</button>
+                <input id='searchBar' type="text" placeholder="Search..." oninput="vApp.scanThrough()">
+            </div>
+
+        </div>
+        <div id="content-box">
+            <div id="addNew">
+                <div id="addText">Add a new task</div>
+                 <input type="text" id="newTask" placeholder="What needs to be done?" maxlength="40">
+                <button onclick="vApp.addTask()">Add!</button>
+            </div>
+            <div id="tasksholder"></div>
+        </div>
+
+
+        <script src="js/vApp.js"></script>
+    </body>
+</html>
